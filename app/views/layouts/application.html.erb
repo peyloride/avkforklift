@@ -29,12 +29,12 @@
 
   <body>
     <%= render partial: 'layouts/header' %>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
     <div class="main">
     <div class="content_box">
       <div class="container">
         <div class="row">
+          <p class="notice"><%= notice %></p>
+          <p class="alert"><%= alert %></p>
           <%= render partial: 'layouts/sidebar' %>
           <%= yield %>
         </div>

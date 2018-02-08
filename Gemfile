@@ -43,3 +43,4 @@ group :development do
 end
 
 gem 'devise'
+gem 'rails_admin', '~> 1.2'

@@ -10,10 +10,37 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180208175132) do
+ActiveRecord::Schema.define(version: 20180208201643) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "forklifts", force: :cascade do |t|
+    t.string "plate"
+    t.integer "brand"
+    t.integer "lifting_capacity"
+    t.integer "production_year"
+    t.integer "lifting_height"
+    t.integer "forklift_type"
+    t.integer "price"
+    t.string "model"
+    t.integer "elevator_type"
+    t.integer "wheels"
+    t.string "accumulator"
+    t.string "system"
+    t.string "made_in"
+    t.integer "attachment"
+    t.integer "status"
+    t.integer "purchase_price"
+    t.date "purchase_date"
+    t.integer "expenses"
+    t.integer "sale_price"
+    t.date "sale_date"
+    t.integer "profit"
+    t.integer "waiting_days"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -28,6 +55,7 @@ ActiveRecord::Schema.define(version: 20180208175132) do
     t.inet "last_sign_in_ip"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean "is_admin"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end

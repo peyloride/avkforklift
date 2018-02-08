@@ -1,7 +1,10 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+User.create!([
+  {email: "okanbinli@gmail.com", encrypted_password: "$2a$11$P0dZOhSPJiKA4WN3Z0RXguLhse.B9Eg2N7DFfAQZKAZ2getfPanCW", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: "2018-02-08 19:58:26", sign_in_count: 1, current_sign_in_at: "2018-02-08 19:58:26", last_sign_in_at: "2018-02-08 19:58:26", current_sign_in_ip: "127.0.0.1", last_sign_in_ip: "127.0.0.1", is_admin: true}
+])
+Forklift.create!([
+  {plate: "32HYS07.T55.F01", brand: "hyster", lifting_capacity: 3200, production_year: 2007, lifting_height: 550, forklift_type: "forklift", price: 36000, model: "", elevator_type: "triplex", wheels: 4, accumulator: "80V DC", system: "", made_in: "USA", attachment: "ss", status: "ready", purchase_price: nil, purchase_date: nil, expenses: nil, sale_price: nil, sale_date: nil, profit: nil, waiting_days: nil},
+  {plate: "30HYU08.T45.F01", brand: "hyundai", lifting_capacity: 3000, production_year: 2009, lifting_height: 450, forklift_type: "forklift", price: 37000, model: "30B-7 AC", elevator_type: "triplex", wheels: 4, accumulator: "AC", system: "Curtis", made_in: "Güney Kore", attachment: "ss", status: "ready", purchase_price: nil, purchase_date: nil, expenses: nil, sale_price: nil, sale_date: nil, profit: nil, waiting_days: nil},
+  {plate: "30HYU08.D33.F01", brand: "hyundai", lifting_capacity: 3000, production_year: 2008, lifting_height: 330, forklift_type: "forklift", price: 32000, model: "30B-7 AC", elevator_type: "dublex", wheels: 4, accumulator: "", system: "Sevcon", made_in: "Güney Kore", attachment: "ss", status: "working", purchase_price: 0, purchase_date: nil, expenses: nil, sale_price: nil, sale_date: nil, profit: nil, waiting_days: nil},
+  {plate: "15KOM00.D34.F01", brand: "komatsu", lifting_capacity: 1500, production_year: 2000, lifting_height: 340, forklift_type: "forklift", price: nil, model: "FB15EX-7", elevator_type: "dublex", wheels: 4, accumulator: "48V DC", system: "Zapi", made_in: "Japonya", attachment: "ss", status: "working", purchase_price: 12000, purchase_date: "2015-09-15", expenses: nil, sale_price: nil, sale_date: nil, profit: nil, waiting_days: nil},
+  {plate: "14STI97.T90.R01", brand: "still", lifting_capacity: 1400, production_year: 1997, lifting_height: 900, forklift_type: "reach_truck", price: 22000, model: "FM14", elevator_type: "triplex", wheels: 3, accumulator: "48V DC", system: "Still", made_in: "Almanya", attachment: "ss", status: "working", purchase_price: nil, purchase_date: nil, expenses: nil, sale_price: nil, sale_date: nil, profit: nil, waiting_days: nil}
+])

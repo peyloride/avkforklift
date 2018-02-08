@@ -2,13 +2,44 @@
 <html>
   <head>
     <title>Avkforklift</title>
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <link href='http://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800,900' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet' type='text/css'>
     <%= csrf_meta_tags %>
+
+    <script>
+      $(document).ready(function() {
+        $('.popup-with-zoom-anim').magnificPopup({
+          type: 'inline',
+          fixedContentPos: false,
+          fixedBgPos: true,
+          overflowY: 'auto',
+          closeBtnInside: true,
+          preloader: false,
+          midClick: true,
+          removalDelay: 300,
+          mainClass: 'my-mfp-zoom-in'
+      });
+    });
+    </script>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <%= yield %>
+    <%= render partial: 'layouts/header' %>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+    <div class="main">
+    <div class="content_box">
+      <div class="container">
+        <div class="row">
+          <%= render partial: 'layouts/sidebar' %>
+          <%= yield %>
+        </div>
+      </div>
+    </div>
+    <%= render partial: 'layouts/footer' %>
   </body>
 </html>

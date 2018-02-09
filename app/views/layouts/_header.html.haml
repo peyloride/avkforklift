@@ -1,0 +1,55 @@
+.header
+  .container
+    .header-top
+      .logo
+        %a{href: "index.html"}
+          %img{alt: "", src: "logo.png"}/
+      .header_right
+        %ul.social
+          %li
+            %a{href: ""}
+              %i.fb
+          %li
+            %a{href: ""}
+              %i.tw
+          %li
+            %a{href: ""}
+              %i.utube
+          %li
+            %a{href: ""}
+              %i.pin
+          %li
+            %a{href: ""}
+              %i.instagram
+        .clearfix
+      .clearfix
+    .banner_wrap
+      .bannertop_box
+        .welcome_box
+          %h2 Welcome to windsur
+          %p It is a long established fact that a reader will be distracted by the readable content of a page
+        .search
+          %input{onblur: "if (this.value == '') {this.value = 'Search';}", onfocus: "this.value = '';", type: "text", value: "Search"}/
+          %input{type: "submit", value: ""}/
+        .cart_bg
+          %ul.cart
+            %a{href: "checkout.html"}
+              %h4
+                %i.cart_icon
+              %p
+                Cart:
+                %span.simpleCart_total
+                (
+                %span#simpleCart_quantity.simpleCart_quantity
+                items)
+              .clearfix
+            %h5.empty
+              %a.simpleCart_empty{href: "javascript:;"} Empty Cart
+            .clearfix
+        %ul.quick_access
+          %li.view_cart
+            %a{href: "checkout.html"} View Cart
+          %li.check
+            %a{href: "checkout.html"} Checkout
+          .clearfix
+      .clearfix

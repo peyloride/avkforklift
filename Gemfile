@@ -44,3 +44,4 @@ end
 
 gem 'devise'
 gem 'rails_admin', '~> 1.2'
+gem 'haml'

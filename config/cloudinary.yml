@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: toyproject
+  api_key: '827592291898246'
+  api_secret: 4xyVAhZpGzbVe3G1LqGUQjB6SV8
+  enhance_image_tag: true
+  static_image_support: false
+production:
+  cloud_name: toyproject
+  api_key: '827592291898246'
+  api_secret: 4xyVAhZpGzbVe3G1LqGUQjB6SV8
+  enhance_image_tag: true
+  static_image_support: true
+test:
+  cloud_name: toyproject
+  api_key: '827592291898246'
+  api_secret: 4xyVAhZpGzbVe3G1LqGUQjB6SV8
+  enhance_image_tag: true
+  static_image_support: false

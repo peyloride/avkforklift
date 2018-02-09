@@ -46,3 +46,4 @@ gem 'devise'
 gem 'rails_admin', '~> 1.2'
 gem 'haml'
 gem "paperclip", "~> 5.2.1"
+gem 'paperclip-cloudinary'

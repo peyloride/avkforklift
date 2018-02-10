@@ -6,6 +6,7 @@ class ForkliftsController < ApplicationController
   end
 
   def show
+    @related_forklifts = Forklift.where(brand: @forklift.brand).limit(10)
   end
 
   private

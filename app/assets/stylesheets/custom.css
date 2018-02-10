@@ -10,3 +10,25 @@
 .image-container {
   height: 200px;
 }
+
+.nbs-flexisel-item {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.price_single {
+  margin: 0;
+}
+
+th, td {
+  padding: 5px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+tr > td:first-child {
+  font-weight: 800;
+  padding-right: 20px;
+}
+
+tr:hover {background-color: #ddd;}

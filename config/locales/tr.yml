@@ -1,0 +1,8 @@
+tr:
+   number:
+     currency:
+        format:
+          unit: '₺'
+          delimiter: ','
+          separator: '.'
+          precision: 0

@@ -12,4 +12,11 @@
 //
 //= require rails-ujs
 //= require turbolinks
-//= require_tree .
+//= require jquery
+//= require classie
+//= require easyResponsiveTabs
+//= require jquery.easydropdown
+//= require jquery.flexisel
+//= require jquery.flexslider
+//= require jquery.magnific-popup
+//= require simpleCart.min

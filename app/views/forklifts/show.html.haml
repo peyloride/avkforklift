@@ -19,7 +19,7 @@
         Lorem Ipsum
     %ul.previous
       %li
-        %a{href: "index.html"} Back to Previous Page
+        =link_to "Geri Dön", :back
     .clearfix
   .singel_right
     .labout.span_1_of_a1
@@ -47,43 +47,6 @@
         %span.reducedfrom $140.00
         %span.amount.item_price.actual $120.00
         %a{href: "#"} click for offer
-      %h2.quick Quick Overview:
-      %p.quick_desc Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; es
-      %ul.size
-        %h3 Size
-        %li
-          %a{href: "#"} 25
-        %li
-          %a{href: "#"} 26
-        %li
-          %a{href: "#"} 27
-        %li
-          %a{href: "#"} 28
-        %li
-          %a{href: "#"} 29
-        %li
-          %a{href: "#"} 30
-        %li
-          %a{href: "#"} 31
-        %li
-          %a{href: "#"} 32
-        %li
-          %a{href: "#"} 33
-      %ul.size
-        %h3 Length
-        %li
-          %a{href: "#"} 32
-        %li
-          %a{href: "#"} 34
-      %ul.product-qty
-        %span Quantity:
-        %select
-          %option 1
-          %option 2
-          %option 3
-          %option 4
-          %option 5
-          %option 6
       .btn_form.button.item_add.item_1
         %form
           %input{title: "", type: "submit", value: "Add to Cart"}/
@@ -156,30 +119,4 @@
       .grid-flex
         %a{href: "#"} Synergy
         %p Rs 870
-  :javascript
-    $(window).load(function() {
-                $("#flexiselDemo3").flexisel({
-                  visibleItems: 3,
-                  animationSpeed: 1000,
-                  autoPlay: true,
-                  autoPlaySpeed: 3000,
-                  pauseOnHover: true,
-                  enableResponsiveBreakpoints: true,
-                    responsiveBreakpoints: {
-                      portrait: {
-                        changePoint:480,
-                        visibleItems: 1
-                      },
-                      landscape: {
-                        changePoint:640,
-                        visibleItems: 2
-                      },
-                      tablet: {
-                        changePoint:768,
-                        visibleItems: 3
-                      }
-                    }
-                  });
-
-              });
-  %script{src: "js/jquery.flexisel.js", type: "text/javascript"}
+=render partial: "shared/initialize_components"

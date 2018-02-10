@@ -1,0 +1,18 @@
+.col-md-9
+  %h3.m_1 Forkliftlerimiz
+  .content_grid
+    -@forklifts.each do |forklift|
+      .col_1_of_3.span_1_of_3.simpleCart_shelfItem
+        =link_to forklift_path(forklift) do
+          .inner_content.clearfix
+            .product_image
+              .image-container
+                =image_tag(forklift.pictures.first.image.url(:medium), class: "img-responsive")
+              .product_container
+                .cart-left
+                  %p.title
+                    =forklift_name(forklift)
+                %span.amount.item_price
+                  =forklift_price(forklift)
+                .clearfix
+    .clearfix

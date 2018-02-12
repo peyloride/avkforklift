@@ -20,6 +20,6 @@ class ForkliftsController < ApplicationController
   end
 
   def filtering_params(params)
-    params.slice(:forklift_type, :elevator_type, :brand, :lifting_capacity, :lifting_height)
+    params.slice(:search, :forklift_type, :elevator_type, :brand, :lifting_capacity, :lifting_height)
   end
 end

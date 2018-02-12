@@ -48,3 +48,4 @@ gem 'haml'
 gem "paperclip", "~> 5.2.1"
 gem 'paperclip-cloudinary'
 gem 'jquery-rails'
+gem 'kaminari'

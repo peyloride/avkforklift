@@ -2,7 +2,7 @@ class ForkliftsController < ApplicationController
   before_action :set_product, only: :show
 
   def index
-    @forklifts = Forklift.all
+    @forklifts = Forklift.order(:created_at).page(params[:page]).per(9)
   end
 
   def show

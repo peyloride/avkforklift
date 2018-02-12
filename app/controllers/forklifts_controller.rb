@@ -6,7 +6,7 @@ class ForkliftsController < ApplicationController
     filtering_params(params).each do |key, value|
       @forklifts = @forklifts.public_send(key, value) if value.present?
     end
-    @forklifts = @forklifts.page(params[:page]).per(9)
+    @forklifts = @forklifts.page(params[:page]).per(12)
   end
 
   def show

@@ -1,26 +1,17 @@
 .col-md-3
   .menu_box
-    %h3.menu_head Menu
+    %h3.menu_head Markalar
     %ul.nav
-      %li
-        %a{href: "apparel.html"} About
-      %li
-        %a{href: "apparel.html"} Apparel
-      %li
-        %a{href: "apparel.html"} Shape Apparel
-      %li
-        %a{href: "apparel.html"} Windsurf
-      %li
-        %a{href: "apparel.html"} Kitesurf
-      %li
-        %a{href: "apparel.html"} Accessories
-      %li
-        %a{href: "apparel.html"} Sale
-      %li
-        %a{href: "apparel.html"} Brands
-      %li
-        %a{href: "apparel.html"} Blog
-      %li
-        %a{href: "apparel.html"} Gadgets
-      %li
-        %a{href: "contact.html"} Contact
+      -brands.each_with_index do |brand, index|
+        %li
+          =link_to brand, forklifts_path(brand: index)
+    %h3.menu_head Forklift Tipi
+    %ul.nav
+      -forklift_types.each_with_index do |forklift_type, index|
+        %li
+          =link_to forklift_type, forklifts_path(forklift_type: index)
+    %h3.menu_head Asansör Tipi
+    %ul.nav
+      -elevator_types.each_with_index do |elevator_type, index|
+        %li
+          =link_to elevator_type, forklifts_path(elevator_type: index)

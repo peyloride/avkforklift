@@ -7,7 +7,10 @@
           .inner_content.clearfix
             .product_image
               .image-container
-                =image_tag(forklift.pictures.first.image.url(:medium), class: "img-responsive")
+                -if forklift.pictures.blank?
+                  =image_tag "missing.png", class: "img-responsive"
+                -else
+                  =image_tag(forklift.pictures.first.image.url(:medium), class: "img-responsive")
               .product_container
                 .cart-left
                   %p.title

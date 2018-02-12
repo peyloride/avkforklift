@@ -2,21 +2,21 @@
   .dreamcrub
     %ul.breadcrumbs
       %li.home
-        %a{href: "index.html", title: "Go to Home Page"}> Home
+        =link_to "Anasayfa", root_path
 
         %span &gt;
       %li.home
 
-        Apparel
+        =link_to @forklift.brand.titleize, forklifts_path(brand: @forklift.read_attribute_before_type_cast(:brand))
         = succeed "\u{a0}" do
           %span &gt;
       %li.home
 
-        Women / Men
+        =link_to @forklift.forklift_type.titleize, forklifts_path(forklift_type: @forklift.read_attribute_before_type_cast(:forklift_type))
         = succeed "\u{a0}" do
           %span &gt;
       %li.women
-        Lorem Ipsum
+        =@forklift.plate
     %ul.previous
       %li
         =link_to "Geri Dön", :back

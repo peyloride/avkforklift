@@ -25,9 +25,12 @@
     .col-xs-12.col-md-9
       .flexslider
         %ul.slides
-          -@forklift.pictures.each do |picture|
-            %li{"data-thumb" => "#{picture.image.url(:large)}"}
-              =image_tag picture.image.url(:large)
+          -if @forklift.pictures.blank?
+            =image_tag "missing.png", class: "img-responsive"
+          -else
+            -@forklift.pictures.each do |picture|
+              %li{"data-thumb" => "#{picture.image.url(:large)}"}
+                =image_tag picture.image.url(:large)
     .col-xs-12.col-md-3
       %h1
         =forklift_name(@forklift)
@@ -112,7 +115,10 @@
   %ul#flexiselDemo3
     -@related_forklifts.each do |forklift|
       %li
-        =image_tag(forklift.pictures.first.image.url(:medium), class: "img-responsive")
+        -if forklift.pictures.blank?
+          =image_tag "missing.png", class: "img-responsive"
+        -else
+          =image_tag(forklift.pictures.first.image.url(:medium), class: "img-responsive")
         .grid-flex
           =link_to forklift_path(forklift) do
             =forklift.brand

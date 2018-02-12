@@ -1,22 +1,35 @@
 .col-md-9
   %h3.m_1 Forkliftlerimiz
+  .filters
+    =form_tag forklifts_path, method: "get" do
+      =select_tag :brand, options_for_select(Forklift.brand_options, selected: params[:brand]), include_blank: true
+      =select_tag :forklift_type, options_for_select(Forklift.forklift_options, selected: params[:forklift_type]), include_blank: true
+      =select_tag :elevator_type, options_for_select(Forklift.elevator_options, selected: params[:elevator_type]), include_blank: true
+      =select_tag :lifting_capacity, options_for_select([['1-2 Ton', 1], ['2-3 Ton', 2], ['3-4 Ton', 3], ['4-5 Ton', 4]], selected: params[:lifting_capacity]), include_blank: true
+      =select_tag :lifting_height, options_for_select([['1-3 m', 1], ['3-5 m', 3], ['5-7 m', 5], ['7-9 m', 7]], selected: params[:lifting_height]), include_blank: true
+      =submit_tag "Filtrele"
+      =link_to "Filtreleri Temizle", root_path
   .content_grid
-    -@forklifts.each do |forklift|
-      .col_1_of_3.span_1_of_3.simpleCart_shelfItem
-        =link_to forklift_path(forklift) do
-          .inner_content.clearfix
-            .product_image
-              .image-container
-                -if forklift.pictures.blank?
-                  =image_tag "missing.png", class: "img-responsive"
-                -else
-                  =image_tag(forklift.pictures.first.image.url(:medium), class: "img-responsive")
-              .product_container
-                .cart-left
-                  %p.title
-                    =forklift_name(forklift)
-                %span.amount.item_price
-                  =forklift_price(forklift)
-                .clearfix
+    -if @forklifts.blank?
+      .nothing-found
+        %p Forklift bulunamadı.
+    -else
+      -@forklifts.each do |forklift|
+        .col_1_of_3.span_1_of_3.simpleCart_shelfItem
+          =link_to forklift_path(forklift) do
+            .inner_content.clearfix
+              .product_image
+                .image-container
+                  -if forklift.pictures.blank?
+                    =image_tag "missing.png", class: "img-responsive"
+                  -else
+                    =image_tag(forklift.pictures.first.image.url(:medium), class: "img-responsive")
+                .product_container
+                  .cart-left
+                    %p.title
+                      =forklift_name(forklift)
+                  %span.amount.item_price
+                    =forklift_price(forklift)
+                  .clearfix
     .clearfix
     =paginate @forklifts

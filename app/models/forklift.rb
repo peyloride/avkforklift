@@ -11,8 +11,8 @@ class Forklift < ApplicationRecord
   scope :forklift_type, -> (forklift_type) { where forklift_type: forklift_type }
   scope :elevator_type, -> (elevator_type) { where elevator_type: elevator_type }
   scope :brand, -> (brand) { where brand: brand }
-  scope :lifting_capacity, -> (min) { where('lifting_capacity > ? AND lifting_capacity < ?', (min.to_i*1000), (min.to_i+1)*1000) }
-  scope :lifting_height, -> (min) { where('lifting_height > ? AND lifting_height < ?', min.to_i*100, (min.to_i+2)*100) }
+  scope :lifting_capacity, -> (min) { where('lifting_capacity >= ? AND lifting_capacity < ?', (min.to_i*1000), (min.to_i+1)*1000) }
+  scope :lifting_height, -> (min) { where('lifting_height >= ? AND lifting_height < ?', min.to_i*100, (min.to_i+2)*100) }
   scope :search, -> (search) { where('plate LIKE ?', "%#{search}%")}
 
   def self.brand_options

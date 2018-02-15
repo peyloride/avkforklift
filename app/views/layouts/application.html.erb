@@ -23,6 +23,10 @@
         });
       });
     </script>
+
+    <% if content_for?(:head) %>
+      <%= yield(:head) %>
+    <% end %>
   </head>
 
   <body>

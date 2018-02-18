@@ -45,4 +45,12 @@ RailsAdmin.config do |config|
     # history_index
     # history_show
   end
+
+  config.model LandingPage do
+    edit do
+      # For RailsAdmin >= 0.5.0
+      field :title
+      field :body, :ck_editor
+    end
+  end
 end

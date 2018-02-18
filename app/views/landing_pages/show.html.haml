@@ -1,0 +1,17 @@
+.col-md-9
+  .dreamcrub
+    %ul.breadcrumbs
+      %li.home
+        =link_to "Anasayfa", root_path
+
+        %span &gt;
+      %li.home
+
+        =@landing_page.title
+    %ul.previous
+      %li
+        =link_to "Geri Dön", :back
+    .clearfix
+  .singel_right
+    =@landing_page.title
+    =@landing_page.body.html_safe

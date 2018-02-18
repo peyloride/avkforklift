@@ -20,3 +20,4 @@
 //= require jquery.flexslider
 //= require jquery.magnific-popup
 //= require simpleCart.min
+//= require ckeditor/init

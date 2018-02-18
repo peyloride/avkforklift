@@ -44,6 +44,9 @@ GEM
     bindex (0.5.0)
     builder (3.2.3)
     byebug (10.0.0)
+    ckeditor (4.2.4)
+      cocaine
+      orm_adapter (~> 0.5.0)
     climate_control (0.2.0)
     cloudinary (1.8.3)
       aws_cf_signer
@@ -239,6 +242,7 @@ PLATFORMS
 
 DEPENDENCIES
   byebug
+  ckeditor
   coffee-rails (~> 4.2)
   devise
   haml

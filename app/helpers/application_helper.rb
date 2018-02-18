@@ -10,4 +10,8 @@ module ApplicationHelper
   def elevator_types
     Forklift.elevator_types.keys.map(&:titleize)
   end
+
+  def landing_pages
+    LandingPage.all.pluck(:id, :title)
+  end
 end

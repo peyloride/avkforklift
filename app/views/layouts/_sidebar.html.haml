@@ -15,3 +15,8 @@
       -elevator_types.each_with_index do |elevator_type, index|
         %li
           =link_to elevator_type, forklifts_path(elevator_type: index)
+    %h3.menu_head AVK Forklift
+    %ul.nav
+      -landing_pages.each_with_index do |landing_page|
+        %li
+          =link_to landing_page[1], landing_page_path(landing_page[0])

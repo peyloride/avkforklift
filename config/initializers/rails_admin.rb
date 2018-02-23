@@ -53,4 +53,36 @@ RailsAdmin.config do |config|
       field :body, :ck_editor
     end
   end
+
+  config.model Forklift do
+    edit do
+      # For RailsAdmin >= 0.5.0
+      field :plate
+      field :brand
+      field :lifting_capacity
+      field :production_year
+      field :lifting_height
+      field :forklift_type
+      field :price
+      field :model
+      field :elevator_type
+      field :wheels
+      field :accumulator
+      field :system
+      field :made_in
+      field :attachment
+      field :status
+      field :purchase_price
+      field :purchase_date
+      field :expenses
+      field :sale_price
+      field :sale_date
+      field :profit
+      field :waiting_days
+      field :index_line_up
+      field :description, :ck_editor
+    end
+  end
 end
+
+

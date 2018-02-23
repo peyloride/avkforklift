@@ -12,6 +12,6 @@
           %p It is a long established fact that a reader will be distracted by the readable content of a page
         .search
           =form_tag forklifts_path, method: "get" do
-            =text_field_tag :search, params[:search], {onblur: "if (this.value == '') {this.value = 'Arama';}", onfocus: "this.value = '';", type: "text", value: "Arama"}
+            =text_field_tag :search, params[:search], {onblur: "if (this.value == '') {this.value = 'Plaka ile arama';}", onfocus: "this.value = '';", type: "text", value: "Plaka ile arama"}
             =submit_tag ''
       .clearfix

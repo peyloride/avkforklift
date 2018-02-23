@@ -55,3 +55,13 @@ tr:hover {background-color: #ddd;}
   background-color: #333;
   border-color: #333;
 }
+
+.add_to_cart {
+  width: 100%;
+  text-align: center;
+}
+
+.truck_icon > img {
+  width: 100%;
+  max-width: 142px;
+}

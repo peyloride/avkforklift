@@ -68,10 +68,11 @@
         %tr
           %td Üretim Yeri
           %td= @forklift.made_in
-
-      .btn_form.button.item_add.item_1
-        %form
-          %input{title: "", type: "submit", value: "Add to Cart"}/
+      .add_to_cart
+        =link_to order_forklift_path(@forklift) do
+          .truck_icon
+            =image_tag "kamyonla.svg"
+        %h2 Kamyona Ekle!
 
   .sap_tabs
     #horizontalTab{style: "display: block; width: 100%; margin: 0px;"}

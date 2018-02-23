@@ -1,0 +1,24 @@
+.col-md-9
+  .dreamcrub
+    %ul.breadcrumbs
+      %li.home
+        =link_to "Anasayfa", root_path
+
+        %span &gt;
+      %li.home
+
+        =link_to @forklift.brand.titleize, forklifts_path(brand: @forklift.read_attribute_before_type_cast(:brand))
+        = succeed "\u{a0}" do
+          %span &gt;
+      %li.home
+
+        =link_to @forklift.forklift_type.titleize, forklifts_path(forklift_type: @forklift.read_attribute_before_type_cast(:forklift_type))
+        = succeed "\u{a0}" do
+          %span &gt;
+      %li.women
+        =@forklift.plate
+    %ul.previous
+      %li
+        =link_to "Geri Dön", :back
+    .clearfix
+  Söyle satın al böyle satın al

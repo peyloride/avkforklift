@@ -1,5 +1,5 @@
 class ForkliftsController < ApplicationController
-  before_action :set_product, only: :show
+  before_action :set_product, only: [:show, :order]
 
   def index
     @forklifts = Forklift.order(:index_line_up, :created_at)
@@ -11,6 +11,9 @@ class ForkliftsController < ApplicationController
 
   def show
     @related_forklifts = Forklift.brand(@forklift.brand).limit(10)
+  end
+
+  def order
   end
 
   private

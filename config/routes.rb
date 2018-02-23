@@ -2,7 +2,9 @@ Rails.application.routes.draw do
   mount Ckeditor::Engine => '/ckeditor'
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   root to: 'forklifts#index'
-  resources :forklifts
+  resources :forklifts do
+    get :order, on: :member
+  end
   resources :landing_pages, only: :show
 
   devise_for :users
